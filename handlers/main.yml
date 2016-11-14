@@ -1,0 +1,6 @@
+---
+
+- name: restart chronograf
+  service: >
+    name="{{ chronograf_service_name }}"
+    state=restarted

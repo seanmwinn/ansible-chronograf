@@ -1,0 +1,27 @@
+---
+chronograf_service_name: "chronograf"
+chronograf_supported_distribution_releases:
+  - "wheezy"
+  - "jessie"
+  - "precise"
+  - "trusty"
+  - "utopic"
+  - "vivid"
+  - "wily"
+  - "xenial"
+  - "yakkety"
+chronograf_release_component: "stable"
+chronograf_install_apt_key_id: ""
+chronograf_install_apt_key_url: "https://repos.influxdata.com/influxdb.key"
+chronograf_install_apt_repository_repo: "deb https://repos.influxdata.com/debian {{ ansible_distribution_release|lower }} {{ chronograf_release_component }}"
+chronograf_install_apt_repository_validate_certs: "no"
+chronograf_install_apt_update_cache: "yes"
+chronograf_install_apt_cache_valid_time: "3600"
+chronograf_install_package_list:
+  - chronograf
+chronograf_bin: "/opt/chronograf/chronograf"
+chronograf_config_file: "/opt/chronograf/config.toml"
+
+chronograf_config_bind: "127.0.0.1:10000"
+chronograf_config_local_database: "/opt/chronograf/chronograf.db"
+chronograf_config_query_response_bytes_limit: "2500000"

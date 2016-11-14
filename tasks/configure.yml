@@ -1,0 +1,7 @@
+---
+
+- name: write chronograf configuration
+  template: >
+    src=config.toml.j2
+    dest="{{ chronograf_config_file }}"
+  notify: restart chronograf
