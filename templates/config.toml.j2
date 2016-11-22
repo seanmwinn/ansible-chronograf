@@ -1,3 +1,9 @@
-Bind = "{{ chronograf_config_bind }}"
-LocalDatabase = "{{ chronograf_config_local_database }}"
-QueryResponseBytesLimit = {{ chronograf_config_query_response_bytes_limit }}
+{%- for chonograf_config_param in chronograf_config|sort -%}
+{% if chronograf_config[chonograf_config_param] is string %}
+{{ chonograf_config_param }} = "{{ chronograf_config[chonograf_config_param] }}"
+{% elif chronograf_config[chonograf_config_param] is iterable %}
+{{ chonograf_config_param }} = ["{{ chronograf_config[chonograf_config_param]|sort|join('\", \"') }}"]
+{% elif chronograf_config[chonograf_config_param] is number %}
+{{ chonograf_config_param }} = {{ chronograf_config[chonograf_config_param]|lower }}
+{% endif %}
+{%- endfor -%}
