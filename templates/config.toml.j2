@@ -1,9 +1,9 @@
-{%- for chonograf_config_param in chronograf_config|sort -%}
-{% if chronograf_config[chonograf_config_param] is string %}
-{{ chonograf_config_param }} = "{{ chronograf_config[chonograf_config_param] }}"
-{% elif chronograf_config[chonograf_config_param] is iterable %}
-{{ chonograf_config_param }} = ["{{ chronograf_config[chonograf_config_param]|sort|join('\", \"') }}"]
-{% elif chronograf_config[chonograf_config_param] is number %}
-{{ chonograf_config_param }} = {{ chronograf_config[chonograf_config_param]|lower }}
+{%- for chronograf_config_param in chronograf_config|sort -%}
+{% if chronograf_config[chronograf_config_param] is string %}
+{{ chronograf_config_param }} = "{{ chronograf_config[chronograf_config_param] }}"
+{% elif chronograf_config[chronograf_config_param] is iterable %}
+{{ chronograf_config_param }} = ["{{ chronograf_config[chronograf_config_param]|sort|join('\", \"') }}"]
+{% elif chronograf_config[chronograf_config_param] is number %}
+{{ chronograf_config_param }} = {{ chronograf_config[chronograf_config_param]|lower }}
 {% endif %}
 {%- endfor -%}
