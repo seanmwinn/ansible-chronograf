@@ -1,23 +1,21 @@
-chronograf
-=========
+# chronograf
 
 An Ansible role which installs and configures 'the C' (Chronograf) of the TICK stack from InfluxData.
 
-Requirements
-------------
+## Requirements
 
 Currently this role is developed for and tested on Debian GNU/Linux (release: jessie). It is assumed to work on other Debian distributions as well.
 
-Example
-----------------
+## Example
 
-    - hosts: chronograf-servers
-      roles:
-         - { role: chronograf }
+```yaml
+- hosts: chronograf-servers
+  roles:
+     - { role: chronograf }
+```
 
 
-Role Variables
---------------
+## Role Variables
 
 Available variables are listed below, along with default values (see defaults/main.yml):
 
@@ -37,19 +35,14 @@ Available variables are listed below, along with default values (see defaults/ma
 >
 > default: 2500000
 
-
-
-Dependencies
-------------
+## Dependencies
 
 None.
 
-License
--------
+## License
 
 MIT
 
-Author Information
-------------------
+## Author Information
 
 * Patrick Ringl
