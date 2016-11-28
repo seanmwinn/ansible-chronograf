@@ -6,7 +6,7 @@ An Ansible role which installs and configures 'the C' (Chronograf) of the TICK s
 
 Currently this role is developed for and tested on Debian GNU/Linux (release: jessie). It is assumed to work on other Debian distributions as well.
 
-Ansible version in use for development:  2.2.0.0
+Ansible version in use for development: 2.2.0
 
 ## Example
 
@@ -21,7 +21,7 @@ Ansible version in use for development:  2.2.0.0
 
 Available variables are listed below, along with default values (see defaults/main.yml):
 
-### chronograf_config
+### chronograf\_config
 
 The following shows the global configuration dict:
 
@@ -32,17 +32,17 @@ chronograf_config:
   QueryResponseBytesLimit: 2500000
 ```
 
-- `chronograf_config['Bind']` 
+- `Bind` 
 > TCP address that Chronograf should bind to.
 >
 > `"127.0.0.1:10000"`
 
-- `chronograf_config['LocalDatabase']`
+- `LocalDatabase`
 > Path to local database file to use or create for storing Chronograf application data.
 >
 > `"/opt/chronograf/chronograf.db"`
 
-- `chronograf_config['QueryResponseBytesLimit']`
+- `QueryResponseBytesLimit`
 > Maximum response size in bytes, for queries that pass through Chronograf.
 >
 > `2500000`
