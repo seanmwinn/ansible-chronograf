@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Sean Winn
+  description: Install and configure Telegraf, the plugin-driven server agent for reporting metrics into InfluxDB
+  company: InfluxData
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - utopic
+        - vivid
+        - xenial
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+  categories:
+    - monitoring
+dependencies: []
